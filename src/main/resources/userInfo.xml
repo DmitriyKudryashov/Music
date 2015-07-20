@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+    <class name="com.domain.UserInfo" table="user_info">
+
+        <id name="id" column="id" type="java.lang.Long">
+            <generator class="increment" />
+        </id>
+
+        <property name="firstName" column="first_name" type="java.lang.String"/>
+        <property name="lastName" column="last_name" type="java.lang.String"/>
+        <property name="phone" column="phone" type="java.lang.String"/>
+        <property name="dateBirth" column="date_birth" type="java.sql.Date"/>
+        <property name="dateRegistration" column="date_registration" type="java.sql.Date"/>
+        <property name="address" column="address" type="java.lang.String"/>
+        <property name="sex" column="sex" type="java.lang.String"/>
+        <property name="city" column="city" type="java.lang.String"/>
+        <property name="email" column="email" type="java.lang.String"/>
+
+
+    </class>
+
+
+</hibernate-mapping>

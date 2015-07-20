@@ -1,0 +1,76 @@
+body{
+    background:url('http://www.artestize.com/wp-content/uploads/2010/12/music.png');
+    padding:50px;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+
+.btn-vk{
+    color:#fff;
+    background-color:#587ea3;
+    border-color:rgba(0,0,0,0.2)
+}
+.btn-vk:hover{
+    color:#fff;
+    background-color:
+    #4a6a89;border-color:rgba(0,0,0,0.2)
+}
+
+.cursor_login{
+    cursor: pointer
+}
+
+#error_text{
+    color: red;
+}
+
+#jumbotronColor{
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+}
+
+
+.inputColor{
+    color: black;
+    font-size: 16px;
+}
