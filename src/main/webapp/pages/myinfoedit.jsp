@@ -3,6 +3,8 @@
 
 <html>
 <head>
+    <meta charset="UTF-8">
+
     <title>Музыкальный портал</title>
     <style><%@include file="/css/profileInfo.css"%></style>
 </head>
@@ -16,7 +18,7 @@
 
             <div class="col-xs-3">
                 <ul class="nav nav-pills nav-stacked admin-menu">
-                    <li><a href="#"> Личный кабинет </a></li>
+                    <li><a href="<c:url value="/myinfo"/>"> Личный кабинет </a></li>
                     <li><a href="#"> Моя музыка </a></li>
                     <li><a href="#"> Вся музыка </a></li>
                 </ul>
@@ -32,7 +34,7 @@
                         <p class="h3-style"><sec:authentication property="principal.username"/></p>
                     </div>
 
-                    <form id="loginForm" class="form-horizontal" action="myinfo" method="get">
+                    <form id="loginForm" class="form-horizontal" action="edit" method="post">
                         <div class=" col-md-5 col-lg-5">
                             <table class="table table-user-information table-style">
                                 <tbody>
@@ -54,23 +56,22 @@
                                 <tr>
                                     <td>Дата рождения:</td>
                                     <td>
-
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Пол:</td>
                                     <td>
-                                        <select class="form-control input-sm">
-                                            <option>Мужской</option>
-                                            <option>Женский</option>
-                                        </select>
+                                        <form:select class="form-control input-sm" path="userinfonew.sex">
+                                            <option value="man">Мужской</option>
+                                            <option value="woman">Женский</option>
+                                        </form:select>
 
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Город:</td>
                                     <td>
-                                        <input type="text" class="input-sm inputColor" value="${userinfo.city}"/>
+                                        <form:input path="userinfonew.city" type="text" class="input-sm inputColor" value="${userinfo.city}"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -79,12 +80,14 @@
                                 <tr>
                                     <td>Мобильный телефон:</td>
                                     <td>
-                                        <input type="text" class="input-sm inputColor" value="${userinfo.phone}"/>
+                                        <form:input path="userinfonew.phone" type="text" class="input-sm inputColor" value="${userinfo.phone}"/>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
                             <input type="submit" class="btn btn-primary" value="Принять изменения">
+
+                            <p class="message_ok">${message_ok}</p>
                         </div>
                     </form>
                 </div>

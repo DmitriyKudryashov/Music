@@ -21,16 +21,17 @@ public class MyInfoController {
         return "myinfo";
     }
 
-    @RequestMapping(value = "/edit")
+    @RequestMapping(value = "/editpage")
     public String userInfoEditPage(ModelMap modelMap) {
         modelMap.addAttribute("userinfonew", new UserInfo());
         return "myinfoedit";
     }
 
-    @RequestMapping(value = "/myinfo", method = RequestMethod.POST)
-    public void userInfoEditPage(@ModelAttribute("userinfonew") UserInfo userInfo) {
+    @RequestMapping(value = "/edit", method = RequestMethod.POST)
+    public String userInfoEditPageAction(@ModelAttribute("userinfonew") UserInfo userInfo, ModelMap modelMap) {
         UserInfoService.updateUserInfo(userInfo);
-
+        modelMap.put("message_ok", "Изменения приняты");
+        return "myinfoedit";
     }
 
 }

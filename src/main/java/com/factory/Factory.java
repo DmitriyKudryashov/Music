@@ -2,10 +2,7 @@ package com.factory;
 
 
 import com.dao.Dao;
-import com.dao.UserDao;
 import com.dao.impl.DaoImpl;
-import com.dao.impl.UserDaoImpl;
-import com.domain.User;
 
 public class Factory {
 

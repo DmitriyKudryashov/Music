@@ -22,5 +22,11 @@
     color: #ffffff;
 }
 
+.message_ok{
+    color: green;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
 
 

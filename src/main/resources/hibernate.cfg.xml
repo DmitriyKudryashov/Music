@@ -8,17 +8,16 @@
     <session-factory>
 
         <!-- Database connection settings -->
-        <property name="connection.driver_class">org.h2.Driver</property>
-        <property name="connection.url">jdbc:h2:file:/Users/home/Documents/database</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/Music_portal</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">root</property>
+        <property name="connection.password">password</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="connection.characterEncoding">UTF-8</property>
 
         <property name="connection.pool_size">1</property>
-
-        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
-
         <property name="show_sql">true</property>
-
         <property name="hbm2ddl.auto">validate</property>
 
         <mapping resource="user.xml" />

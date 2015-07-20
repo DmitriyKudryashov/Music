@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="H2" uuid="8834496e-daf0-46ab-92c2-f1a3c2fdd15c">
-    <database-info product="H2" version="1.3.176 (2014-04-05)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.3.176 (2014-04-05)">
-      <identifier-quote-string>&quot;</identifier-quote-string>
+  <data-source name="MySQL - Music_portal@localhost" uuid="665fdb0b-7115-433d-b82f-d10073c4e3fb">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
     </database-info>
-    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
-    <schema name="PUBLIC" catalog="DATABASE"/>
-    <table name="USER" schema="PUBLIC" catalog="DATABASE" type="TABLE">
-      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="LOGIN" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="PASSWORD" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="ROLE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="USER_INFO_ID" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
-      <primary-key name="CONSTRAINT_2" columns="ID"/>
-      <foreign-key name="FK27E3CB9627008E" columns="USER_INFO_ID" ref-table="USER_INFO" ref-schema="PUBLIC" ref-catalog="DATABASE" ref-columns="ID" update-rule="1" delete-rule="1" deferrability="2"/>
-      <index name="FK27E3CB9627008E_INDEX_2" unique="false" columns="USER_INFO_ID"/>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="Music_portal"/>
+    <table name="USER" schema="" catalog="Music_portal" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="login" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="role" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="user_info_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="FK27E3CB9627008E" columns="user_info_id" ref-table="user_info" ref-schema="" ref-catalog="Music_portal" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK27E3CB9627008E" unique="false" columns="user_info_id"/>
     </table>
-    <table name="USER_INFO" schema="PUBLIC" catalog="DATABASE" type="TABLE">
-      <column name="ID" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="FIRST_NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="LAST_NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="PHONE" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="DATE_BIRTH" sqlType="DATE" precision="8" scale="0" nullable="true" jdbcType="91"/>
-      <column name="DATE_REGISTRATION" sqlType="DATE" precision="8" scale="0" nullable="true" jdbcType="91"/>
-      <column name="ADDRESS" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="SEX" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="CITY" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="EMAIL" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="CONSTRAINT_BC" columns="ID"/>
-      <exported-key name="FK27E3CB9627008E" table="USER" schema="PUBLIC" catalog="DATABASE" columns="USER_INFO_ID"/>
+    <table name="user_info" schema="" catalog="Music_portal" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="first_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date_birth" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="date_registration" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="address" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="sex" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="city" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="FK27E3CB9627008E" table="USER" schema="" catalog="Music_portal" columns="user_info_id"/>
     </table>
   </data-source>
 </component>
