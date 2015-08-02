@@ -1,7 +1,10 @@
 package com.config;
 
 
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import java.util.logging.Filter;
 
 
 public class Initializer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -19,5 +22,6 @@ public class Initializer extends AbstractAnnotationConfigDispatcherServletInitia
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
+
 
 }

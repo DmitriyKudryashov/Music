@@ -14,7 +14,7 @@ public class MainController {
 
     @RequestMapping(value = "/", method = {RequestMethod.HEAD, RequestMethod.GET})
     public String indexPage(ModelMap modelMap) {
-        return "index";
+        return "test";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

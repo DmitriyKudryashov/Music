@@ -3,7 +3,6 @@
 
 <html>
 <head>
-    <meta charset="UTF-8">
 
     <title>Музыкальный портал</title>
     <style><%@include file="/css/profileInfo.css"%></style>
@@ -34,20 +33,20 @@
                         <p class="h3-style"><sec:authentication property="principal.username"/></p>
                     </div>
 
-                    <form id="loginForm" class="form-horizontal" action="edit" method="post">
+                    <form id="loginForm" class="form-horizontal" action="myinfoedit" method="post">
                         <div class=" col-md-5 col-lg-5">
                             <table class="table table-user-information table-style">
                                 <tbody>
                                 <tr>
                                     <td>Имя:</td>
                                     <td>
-                                        <form:input path="userinfonew.firstName" type="text" class="input-sm inputColor" value="${userinfo.firstName}"/>
+                                        <form:input type="text" path="userinfonew.firstName" class="input-sm inputColor" value="${userinfo.firstName}"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Фамилия:</td>
                                     <td>
-                                        <form:input path="userinfonew.lastName" type="text" class="input-sm inputColor" value="${userinfo.lastName}"/>
+                                        <form:input type="text" path="userinfonew.lastName" class="input-sm inputColor" value="${userinfo.lastName}"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -62,8 +61,8 @@
                                     <td>Пол:</td>
                                     <td>
                                         <form:select class="form-control input-sm" path="userinfonew.sex">
-                                            <option value="man">Мужской</option>
-                                            <option value="woman">Женский</option>
+                                            <option value="Мужской">Мужской</option>
+                                            <option value="Женский">Женский</option>
                                         </form:select>
 
                                     </td>
@@ -87,7 +86,6 @@
                             </table>
                             <input type="submit" class="btn btn-primary" value="Принять изменения">
 
-                            <p class="message_ok">${message_ok}</p>
                         </div>
                     </form>
                 </div>

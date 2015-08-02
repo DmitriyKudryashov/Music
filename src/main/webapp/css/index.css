@@ -1,8 +1,53 @@
-body{
-    background:url('http://www.artestize.com/wp-content/uploads/2010/12/music.png');
-    padding:50px;
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
+#nav{
+    background: rgba(255, 255, 255, 1);
+    height: 20px;
+    color: #ffffff;
+}
+
+#topmusic {
+    background-image: url(http://31.media.tumblr.com/tumblr_mamx3bILCa1qfb5hdo1_1280.jpg);
+    background-size:100% 100%;
+    height:100%;
+    width: 100%;
+    padding-top:50px;
+    color: #000000;
+}
+
+
+#topartist {
+    background: url(http://cdn02.masterstudies.com/element_db/52/5261_Electronics_Music_Production_pic_1.jpg);
+    background-size:100% 100%;
+    height:100%;
+    width: 100%;
+    padding-top:50px;
+    color: #fff;
+}
+
+#topalbums {
+    background: url(http://www.formatiatempo.ro/wp-content/uploads/2015/03/1.jpg);
+    background-size:100% 100%;
+    height:100%;
+    width: 100%;
+    padding-top:50px;
+    color: #ffffff;
+}
+
+#newmusic {
+    background: url(http://creativesocialblog.com/wp-content/uploads/2014/11/headphones-music-sound-1031755-1950x1080.jpg);
+    background-size:100% 100%;
+    height:100%;
+    width: 100%;
+    padding-top:50px;
+    color: #fff;
+}
+
+
+/*
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
@@ -73,4 +118,8 @@ body{
 .inputColor{
     color: black;
     font-size: 16px;
+}
+
+.navbar-white{
+    background-color: #ffffff;
 }

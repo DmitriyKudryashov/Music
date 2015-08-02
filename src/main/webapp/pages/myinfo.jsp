@@ -60,7 +60,7 @@
                         </table>
 
 
-                        <a href="<c:url value="/editpage"/> " class="btn btn-sm btn-warning">Изменить информацию</a>
+                        <a href="<c:url value="/myinfoedit"/> " class="btn btn-sm btn-warning">Изменить информацию</a>
                     </div>
                 </div>
             </div>
